@@ -41,4 +41,7 @@ period = "5y"
 apple_stock = yf.download(ticker_symbol, period=period)
 
 # Print the historical data
-print(apple_stock)
+# print(apple_stock)
+
+df = apple_stock['Close']
+print(df)
