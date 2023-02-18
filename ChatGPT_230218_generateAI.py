@@ -111,8 +111,11 @@ class Triangle:
 
 # 생성 AI의 예제 코드
 def generate_shape():
-    # 도형의 형태를 무작위로 선택
-    shape_type = random.choice(["square", "circle", "triangle"])
+    # # 도형의 형태를 무작위로 선택
+    # shape_type = random.choice(["square", "circle", "triangle"])
+    # 클래스를 리스트로 저장하고, 무작위로 선택
+    classes = [Square, Circle, Triangle]
+    shape_class = random.choice(classes)
 
     # 도형의 크기를 무작위로 선택
     size = random.randint(1, 10)
@@ -120,13 +123,16 @@ def generate_shape():
     # 도형의 색상을 무작위로 선택
     color = random.choice(["red", "green", "blue"])
 
+    # # 도형을 생성하여 반환
+    # if shape_class == "square":
+    #     return Square(size=size, color=color)
+    # elif shape_class == "circle":
+    #     return Circle(radius=size, color=color)
+    # else:
+    #     return Triangle(size=size, color=color)
+
     # 도형을 생성하여 반환
-    if shape_type == "square":
-        return Square(size=size, color=color)
-    elif shape_type == "circle":
-        return Circle(radius=size, color=color)
-    else:
-        return Triangle(size=size, color=color)
+    return shape_class(size=size, color=color)
 
 # 생성된 도형을 이미지 파일로 저장하고, 그래프로 출력하는 코드
 shape = generate_shape()
