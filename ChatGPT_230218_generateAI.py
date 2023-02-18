@@ -75,8 +75,7 @@ import random
 
 import random
 import matplotlib.pyplot as plt
-from PIL import Image
-
+from PIL import Image, ImageDraw
 
 # Square, Circle, Triangle 클래스 정의
 class Square:
@@ -87,7 +86,6 @@ class Square:
     def draw(self):
         img = Image.new('RGB', (self.size, self.size), color=self.color)
         return img
-
 
 class Circle:
     def __init__(self, radius, color):
@@ -100,7 +98,6 @@ class Circle:
         draw.ellipse((0, 0, self.radius * 2, self.radius * 2), fill=self.color)
         return img
 
-
 class Triangle:
     def __init__(self, size, color):
         self.size = size
@@ -111,7 +108,6 @@ class Triangle:
         draw = ImageDraw.Draw(img)
         draw.polygon([(0, self.size), (self.size, self.size), (self.size // 2, 0)], fill=self.color)
         return img
-
 
 # 생성 AI의 예제 코드
 def generate_shape():
@@ -131,7 +127,6 @@ def generate_shape():
         return Circle(radius=size, color=color)
     else:
         return Triangle(size=size, color=color)
-
 
 # 생성된 도형을 이미지 파일로 저장하고, 그래프로 출력하는 코드
 shape = generate_shape()
