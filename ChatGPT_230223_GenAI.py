@@ -152,7 +152,9 @@ sizes = {
     "큰": 80,
 }
 
-colors = ["빨간색", "파란색", "노란색", "초록색", "보라색"]
+# colors = ["빨간색", "파란색", "노란색", "초록색", "녹색"]
+# colors = ["빨간색", "파란색", "노란색", "초록색"]
+colors = ["red", "blue", "yellow", "green", "purple"]
 
 num_shapes = random.randint(1, 10)
 
@@ -191,4 +193,5 @@ turtle.done()
 
 """
 turtle.TurtleGraphicsError: bad color string: 노란색
+solution: 색깔 이름을 영어로 바꾸니 해결
 """
