@@ -170,18 +170,8 @@ for i in range(num_shapes):
     if shape == "원":
         shapes[shape](sizes[size])
     else:
-        sides = {
-            "사각형": 4,
-            "삼각형": 3,
-            "마름모": 4,
-            "오각형": 5,
-        }
-        angle = {
-            "사각형": 90,
-            "삼각형": 120,
-            "마름모": 45,
-            "오각형": 72,
-        }
+        sides = {"사각형": 4, "삼각형": 3, "마름모": 4, "오각형": 5}
+        angle = {"사각형": 90, "삼각형": 120, "마름모": 45, "오각형": 72}
         turtle.right(angle[shape] / 2)
         for j in range(sides[shape]):
             turtle.forward(sizes[size])
